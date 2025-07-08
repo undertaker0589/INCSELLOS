@@ -1,0 +1,14 @@
+.navbar {
+  background-color: #343a40;
+  padding: 10px 20px;
+}
+.navbar-brand img {
+  max-height: 40px;
+}
+.nav-link {
+  color: white;
+  margin: 0 10px;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}

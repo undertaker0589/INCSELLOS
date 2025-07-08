@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELLOS INCAUCA</title>
+    <link rel="stylesheet" href="/static/css/cabecera.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/sweetalert.min.css">
+    <script src="/static/js/cabecera.min.js"></script>
+    <script src="/static/js/jQuery.min.js"></script>    
+    <script src="/static/js/chartnmp.js"></script>
+    <script src="/static/js/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+</head>
+<!--barra de tareas de la aplicion web sellos incauca y sellos polipropileno,agregar valores desde una card en home-->
+<body class="p-0 m-0 border-3 bd-example m-3 border-3">
+    <nav class="navbar navbar-expand-lg bg-light border-3 border-bottom">
+       <div class="container-fluid">        
+          <a class="navbar-brand" href="https://www.incauca.com/es/"><img src="/static/img/logo.png" alt=""></a>
+             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="/home">inicio</a>
+                  <a class="nav-link active" aria-current="page" href="/view_sello">sellos incauca</a>
+                  <a class="nav-link active" aria-current="page" href="/view_sello_pp">sellos polipropileno</a>
+                  <a class="nav-link active" aria-current="page" href="/graficos">graficos</a>            
+                </div>
+             </div>
+          </div>
+            <strong id="user">{{ session["username"]}}</strong>
+            <a href="{{url_for('logout')}}" class="mx-3"><img width="40px" onclick="logout()" src="/static/img/info.png"></a>    
+       </nav>  
+   </body>
+</html>

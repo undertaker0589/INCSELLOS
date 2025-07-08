@@ -1,0 +1,87 @@
+{% include 'cabecera.html' %}
+<link rel="stylesheet" href="/static/css/home.css">
+<link rel="stylesheet" href="/static/css/sweetalert.min.css">
+<!-- caja total sellos incauca -->
+<div class="cajas">
+   <div class="col-md-2">
+    <div class="card-2">
+        <div class="card-header bg-info text-center">INCAUCA</div>
+        <div class="card-body">
+            <h1 class="h1 card-title"><strong id="total"></strong></h1>
+        </div>
+     </div>
+  </div>
+  <!--caja total sellos polipropileno -->
+ <div class="col-md-2">
+    <div class="card-2" >
+        <div class="card-header bg-success text-center">POLIPROPILENO</div>
+        <div class="card-body">
+            <h1 class="h1 card-title"><strong id="totalp"></strong></h1>
+        </div>
+      </div>
+    </div>
+</div>
+<br><br><br><br>
+<!-- caja para agregar valores a la app web sellos incauca-->
+<div class="justify-content-center" style="position: relative; left: 120px;">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-info text-center"><strong>SELLOS INCAUCA</strong></div>
+                <div class="card-body">
+                    <form action="/agregar_sello" method="POST" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="numero" class="form-label">NUMERO</label>
+                            <input type="text" class="form-control" id="numero" name="numero" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha" class="form-label">FECHA</label>
+                            <input type="date" class="form-control" id="fecha" name="fecha" required />
+                        </div>
+                        <button class="btn btn-success btn-sm" type="submit">ENVIAR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+<!--alertas y mensajes de la aplicacion sellos incauca y polipropileno -->
+{% with messages= get_flashed_messages() %} 
+ {% if messages %}
+ {% for message in messages %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>    
+ {% endfor %}
+ {% endif %}
+ {% endwith %}
+<!--cajas donde se agregaran datos o valores a la applicacion sellos polipropileno-->
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-header bg-success text-center"><strong>SELLOS POLIPROPILENO</strong></div>
+                <div class="card-body">
+                    <form action="/agregar_sello_pp" method="POST" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="numero" class="form-label">NUMERO</label>
+                            <input type="text" class="form-control" id="numero" name="numero" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha" class="form-label">FECHA</label>
+                            <input type="date" class="form-control" id="fecha2" name="fecha" required />
+                        </div>
+                        <button class="btn btn-info btn-sm" type="submit">ENVIAR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/home.min.js"></script>
+<script src="/static/js/sweetalert.min.js"></script>
+
+
+
+  
+
+    
+        
+

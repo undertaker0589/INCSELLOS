@@ -1,0 +1,17 @@
+.card {
+  position: relative;
+  margin-top: 250px;
+  left: 400px;
+  bottom: 100px;
+  width: 450px;
+  height: 400px;
+}
+.alert {
+  position: fixed;
+  top: 15%;
+  right: 680px;
+  text-align: center;
+  width: 400px;
+  border-radius: 5px;
+  font-weight: bold;
+}

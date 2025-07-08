@@ -1,0 +1,36 @@
+/* Estilos personalizados para la tabla */
+body {
+  font-family: Arial, sans-serif;
+}
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+}
+.card-header {
+  font-size: 1.0em;
+  font-weight: bold;
+  color: white;
+}
+.table-responsive {
+  overflow-y: auto;
+  max-height: 400px;
+}
+.alert {
+  position: fixed;
+  top: 15%;
+  left: 40px;
+  text-align: center;
+  width: 230px;
+  border-radius: 5px;
+}
+.table-responsive thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+

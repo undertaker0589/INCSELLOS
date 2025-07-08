@@ -1,0 +1,11 @@
+.card {
+  position: relative;
+  margin-top: 250px;
+  left: 400px;
+  bottom: 100px;
+  width: 480px;
+  height: 480px;
+}
+.card-header{
+    color: white;
+}

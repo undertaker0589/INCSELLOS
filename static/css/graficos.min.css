@@ -1,0 +1,28 @@
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+  overflow-y: hidden;
+}
+.card {
+  margin: 30px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  max-height: 600px;
+}
+canvas {
+  margin-top: 20px;
+}
+.card-header {
+  font-size: 1.0em;
+  font-weight: bold;
+  color: white;
+}
+.row {
+  position: relative;
+  display:  flex;
+  gap: 73px;
+}
+
+
+
+

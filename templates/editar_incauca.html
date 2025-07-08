@@ -1,0 +1,19 @@
+{% include "cabecera.html" %}
+<br><br><br>
+ <div class="container-fluid row m-0 vh-90 justify-content-center align-items-center">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-header bg-info">EDITAR</div>
+                <div class="card-body">
+                    <form action="/update/{{sello[0]}}" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="numero" class="form-label">NUMERO</label>
+                            <input type="text" class="form-control" name="numero" id="numero" value="{{sello[1]}}">
+                        </div>
+                        <button class="btn btn-success btn-sm" id="btn_delete" type="submit">ACTUALIZAR</button>
+                    </form>
+                </div>
+            </div>
+        </div>    
+  </div>
+<script src="/static/js/editarIncauca.min.js"></script>

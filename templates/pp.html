@@ -1,0 +1,68 @@
+{% include "cabecera.html" %}
+<link rel="stylesheet" href="/static/css/pp.min.css">
+<!--campo de busqueda de valores registros en la app sellos polipropileno-->
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <form action="/filtrar_sello_pp" method="post" class="d-flex" role="search">
+          <input class="form-control me-2" type="search" name="numero" id="numero"  placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div> 
+</nav>
+<!-- alerta campo de filtrar "sello no existe" de la app web sellos polipropileno-->
+{% with messages= get_flashed_messages() %} 
+{% if messages %}
+{% for message in messages %} 
+<div class="alert alert-danger alert-dismissible" id="alerta-buscar" role="alert">
+    <strong>{{message}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>  
+{% endfor %}
+{% endif %}
+{% endwith %}
+<!--tabla y cuerpo de la tabla donde visualizaremos los registros de los sellos polipropileno incauca-->
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header bg-info text-center"><strong>SELLOS POLIPROPILENO </strong></div>
+                  <div class="card-body">
+                    <button id="btnExport" onclick="exportReportToExcel()">Exportar Excel</button>
+                    <div class="table-responsive">
+                      <table id="tabla" class="table table-bordered table-hover">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>ID</th>
+                                <th>NUMERO</th>
+                                <th>FECHA</th>
+                                <th>SUPERVISOR</th>
+                                <th>ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;">                            
+                            {% for dato in datos %}
+                            <tr>
+                                <td>{{dato[0]}}</td>
+                                <td>{{dato[1]}}</td>
+                                <td>{{dato[2]}}</td>
+                                <td>{{dato[3]}}</td>
+                                <td>
+                                  <a style="margin-right: 10px;" href="/editar_poli/{{dato[0]}}"><img width="20px" height="20px;" src="/static/img/UP.png"></a>
+                                  <a class="btn-danger" style="margin-left: 30px" href="/delete_pp/{{dato[0]}}"><img width="20px" height="20px" src="/static/img/dele.png"></a>   
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>                        
+                    </table>
+                </div>
+             </div>
+         </div>
+     </div>
+   </div>
+</div>
+<script src="/static/js/pp.min.js"></script>
+<script src="https://unpkg.com/xlsx@latest/dist/xlsx.full.min.js"></script>
+<script src="https://unpkg.com/file-saverjs@latest/FileSaver.min.js"></script>
+<script src="https://unpkg.com/tableexport@latest/dist/js/tableexport.min.js"></script>
+

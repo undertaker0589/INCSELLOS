@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+.row {
+  justify-content: center;
+}
+.card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.form-label {
+  font-weight: bold;
+}
+.card {
+  width: 400px;   
+  margin: 14px;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-header {
+  font-size: 1.0em;
+  font-weight: bold;
+  color: white;
+}
+.card-body {
+  background-color: #f8f9fa;
+}
+.alert {
+  position: fixed;
+  top: 39%;
+  right: 680px;
+  text-align: center;
+  width: 400px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.cajas {
+  position: relative;
+  gap: 1180px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.card-2 {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  margin: 17PX;
+}
